@@ -36,4 +36,4 @@ export function compareRecords(a: any, b: any, field: string) {
   return compareString(a[field], b[field])
 }
 
-export const host = import.meta.env.VITE_API_HOST
+export const host = import.meta.env.VITE_API_HOST ?? '/api'
