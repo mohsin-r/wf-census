@@ -367,6 +367,20 @@ export default function DataForm(props: { mode: string; id?: string }) {
                                     </Form.Item>
                                     <Form.Item
                                       className="w-full sm:w-80 mb-0"
+                                      label="Relationship to primary applicant"
+                                      name={[field.name, 'relationship']}
+                                      rules={[
+                                        {
+                                          required: true,
+                                          message:
+                                            'Relationship of the family member is required.'
+                                        }
+                                      ]}
+                                    >
+                                      <Input />
+                                    </Form.Item>
+                                    <Form.Item
+                                      className="w-full sm:w-80 mb-0"
                                       label="Occupation"
                                       name={[field.name, 'occupation']}
                                       rules={[
