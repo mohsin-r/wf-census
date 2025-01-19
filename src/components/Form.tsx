@@ -365,20 +365,22 @@ export default function DataForm(props: { mode: string; id?: string }) {
                                     >
                                       <DatePicker className="w-full sm:w-80" />
                                     </Form.Item>
-                                    <Form.Item
-                                      className="w-full sm:w-80 mb-0"
-                                      label="Relationship to primary applicant"
-                                      name={[field.name, 'relationship']}
-                                      rules={[
-                                        {
-                                          required: true,
-                                          message:
-                                            'Relationship of the family member is required.'
-                                        }
-                                      ]}
-                                    >
-                                      <Input />
-                                    </Form.Item>
+                                    {index !== 0 && (
+                                      <Form.Item
+                                        className="w-full sm:w-80 mb-0"
+                                        label="Relationship to primary applicant"
+                                        name={[field.name, 'relationship']}
+                                        rules={[
+                                          {
+                                            required: true,
+                                            message:
+                                              'Relationship of the family member is required.'
+                                          }
+                                        ]}
+                                      >
+                                        <Input />
+                                      </Form.Item>
+                                    )}
                                     <Form.Item
                                       className="w-full sm:w-80 mb-0"
                                       label="Occupation"
