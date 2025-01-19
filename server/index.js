@@ -108,7 +108,7 @@ if (!down) {
         }
     });
     app.get('*', (req, res) => {
-        res.sendFile(path_1.default.join(__dirname, '../client/dist/index.html'));
+        res.sendFile(path_1.default.join(__dirname, '../dist/index.html'));
     });
 }
 else {
